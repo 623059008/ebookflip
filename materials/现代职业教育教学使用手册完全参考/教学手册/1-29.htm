@@ -1,0 +1,544 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=GB2312">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 9">
+<meta name=Originator content="Microsoft Word 9">
+<link rel=File-List href="./1-29.files/filelist.xml">
+<title>29．教学最优化理论</title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>Administrator</o:Author>
+  <o:Template>Normal</o:Template>
+  <o:LastAuthor>Administrator</o:LastAuthor>
+  <o:Revision>4</o:Revision>
+  <o:TotalTime>6</o:TotalTime>
+  <o:Created>2008-07-12T05:53:00Z</o:Created>
+  <o:LastSaved>2008-08-04T05:27:00Z</o:LastSaved>
+  <o:Pages>1</o:Pages>
+  <o:Words>122</o:Words>
+  <o:Characters>700</o:Characters>
+  <o:Company>555</o:Company>
+  <o:Lines>5</o:Lines>
+  <o:Paragraphs>1</o:Paragraphs>
+  <o:CharactersWithSpaces>859</o:CharactersWithSpaces>
+  <o:Version>9.2812</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:PunctuationKerning/>
+  <w:DrawingGridVerticalSpacing>7.8 磅</w:DrawingGridVerticalSpacing>
+  <w:DisplayHorizontalDrawingGridEvery>0</w:DisplayHorizontalDrawingGridEvery>
+  <w:DisplayVerticalDrawingGridEvery>2</w:DisplayVerticalDrawingGridEvery>
+  <w:Compatibility>
+   <w:SpaceForUL/>
+   <w:BalanceSingleByteDoubleByteWidth/>
+   <w:DoNotLeaveBackslashAlone/>
+   <w:ULTrailSpace/>
+   <w:DoNotExpandShiftReturn/>
+   <w:AdjustLineHeightInTable/>
+   <w:UseFELayout/>
+  </w:Compatibility>
+ </w:WordDocument>
+</xml><![endif]-->
+<style>
+<!--
+p.1
+	{mso-char-indent-size:10.5pt;}
+li.1
+	{mso-char-indent-size:10.5pt;}
+div.1
+	{mso-char-indent-size:10.5pt;}
+p.A
+	{mso-char-indent-size:5pt;}
+li.A
+	{mso-char-indent-size:5pt;}
+div.A
+	{mso-char-indent-size:5pt;}
+p.11
+	{mso-char-indent-size:5pt;}
+li.11
+	{mso-char-indent-size:5pt;}
+div.11
+	{mso-char-indent-size:5pt;}
+p.1
+	{mso-char-indent-size:10.5pt;}
+li.1
+	{mso-char-indent-size:10.5pt;}
+div.1
+	{mso-char-indent-size:10.5pt;}
+p.A
+	{mso-char-indent-size:5pt;}
+li.A
+	{mso-char-indent-size:5pt;}
+div.A
+	{mso-char-indent-size:5pt;}
+p.11
+	{mso-char-indent-size:5pt;}
+li.11
+	{mso-char-indent-size:5pt;}
+div.11
+	{mso-char-indent-size:5pt;}
+p.1
+	{mso-char-indent-size:10.5pt;}
+li.1
+	{mso-char-indent-size:10.5pt;}
+div.1
+	{mso-char-indent-size:10.5pt;}
+p.A
+	{mso-char-indent-size:5pt;}
+li.A
+	{mso-char-indent-size:5pt;}
+div.A
+	{mso-char-indent-size:5pt;}
+p.11
+	{mso-char-indent-size:5pt;}
+li.11
+	{mso-char-indent-size:5pt;}
+div.11
+	{mso-char-indent-size:5pt;}
+ /* Font Definitions */
+@font-face
+	{font-family:宋体;
+	panose-1:2 1 6 0 3 1 1 1 1 1;
+	mso-font-alt:SimSun;
+	mso-font-charset:134;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:3 135135232 16 0 262145 0;}
+@font-face
+	{font-family:幼圆;
+	panose-1:2 1 5 9 6 1 1 1 1 1;
+	mso-font-charset:134;
+	mso-generic-font-family:modern;
+	mso-font-pitch:fixed;
+	mso-font-signature:1 135135232 16 0 262144 0;}
+@font-face
+	{font-family:华文彩云;
+	panose-1:2 1 8 0 4 1 1 1 1 1;
+	mso-font-charset:134;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:1 135200768 16 0 262144 0;}
+@font-face
+	{font-family:仿宋_GB2312;
+	panose-1:2 1 6 9 3 1 1 1 1 1;
+	mso-font-charset:134;
+	mso-generic-font-family:modern;
+	mso-font-pitch:fixed;
+	mso-font-signature:1 135135232 16 0 262144 0;}
+@font-face
+	{font-family:方正舒体;
+	panose-1:2 1 6 1 3 1 1 1 1 1;
+	mso-font-charset:134;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:3 135135232 16 0 262144 0;}
+@font-face
+	{font-family:方正姚体;
+	panose-1:2 1 6 1 3 1 1 1 1 1;
+	mso-font-charset:134;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:3 135135232 16 0 262144 0;}
+@font-face
+	{font-family:"\@宋体";
+	panose-1:2 1 6 0 3 1 1 1 1 1;
+	mso-font-charset:134;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:3 135135232 16 0 262145 0;}
+@font-face
+	{font-family:"\@仿宋_GB2312";
+	panose-1:2 1 6 9 3 1 1 1 1 1;
+	mso-font-charset:134;
+	mso-generic-font-family:modern;
+	mso-font-pitch:fixed;
+	mso-font-signature:1 135135232 16 0 262144 0;}
+@font-face
+	{font-family:"\@方正舒体";
+	panose-1:2 1 6 1 3 1 1 1 1 1;
+	mso-font-charset:134;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:3 135135232 16 0 262144 0;}
+@font-face
+	{font-family:"\@方正姚体";
+	panose-1:2 1 6 1 3 1 1 1 1 1;
+	mso-font-charset:134;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:3 135135232 16 0 262144 0;}
+@font-face
+	{font-family:"\@华文彩云";
+	panose-1:2 1 8 0 4 1 1 1 1 1;
+	mso-font-charset:134;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:1 135200768 16 0 262144 0;}
+@font-face
+	{font-family:"\@幼圆";
+	panose-1:2 1 5 9 6 1 1 1 1 1;
+	mso-font-charset:134;
+	mso-generic-font-family:modern;
+	mso-font-pitch:fixed;
+	mso-font-signature:1 135135232 16 0 262144 0;}
+@font-face
+	{font-family:"Arial Unicode MS";
+	panose-1:2 11 6 4 2 2 2 2 2 4;
+	mso-font-charset:134;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:-1 -369098753 63 0 2031871 0;}
+@font-face
+	{font-family:"\@Arial Unicode MS";
+	mso-font-charset:134;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:-1 -369098753 63 0 2031871 0;}
+ /* Style Definitions */
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:none;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:宋体;
+	mso-font-kerning:1.0pt;
+	mso-fareast-language:ZH-CN;}
+p.MsoBodyText, li.MsoBodyText, div.MsoBodyText
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:0cm;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:none;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:宋体;
+	mso-font-kerning:1.0pt;
+	mso-fareast-language:ZH-CN;}
+p.MsoPlainText, li.MsoPlainText, div.MsoPlainText
+	{margin-right:0cm;
+	mso-margin-top-alt:auto;
+	mso-margin-bottom-alt:auto;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Arial Unicode MS";
+	mso-fareast-language:ZH-CN;}
+p
+	{margin-right:0cm;
+	mso-margin-top-alt:auto;
+	mso-margin-bottom-alt:auto;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Arial Unicode MS";
+	mso-fareast-language:ZH-CN;}
+p.1, li.1, div.1
+	{mso-style-name:样式1;
+	mso-style-parent:正文文字;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:0cm;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	text-indent:21.0pt;
+	mso-char-indent-count:2.0;
+	mso-char-indent-size:10.5pt;
+	mso-pagination:none;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:宋体;
+	mso-font-kerning:1.0pt;
+	mso-fareast-language:ZH-CN;}
+p.a, li.a, div.a
+	{mso-style-name:重点段落;
+	mso-style-update:auto;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	text-indent:10.0pt;
+	mso-char-indent-count:2.0;
+	mso-char-indent-size:5.0pt;
+	line-height:18.0pt;
+	mso-pagination:none;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:幼圆;
+	mso-font-kerning:1.0pt;
+	text-shadow:auto;
+	mso-fareast-language:ZH-CN;
+	font-weight:bold;
+	mso-bidi-font-weight:normal;}
+p.02, li.02, div.02
+	{mso-style-name:样式02;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	text-indent:24.0pt;
+	mso-pagination:none;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:华文彩云;
+	color:#666699;
+	mso-font-kerning:1.0pt;
+	mso-fareast-language:ZH-CN;}
+p.10, li.10, div.10
+	{mso-style-name:要点段落1;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	text-indent:24.1pt;
+	line-height:16.0pt;
+	mso-pagination:none;
+	font-size:14.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:仿宋_GB2312;
+	color:#339966;
+	mso-font-kerning:1.0pt;
+	mso-fareast-language:ZH-CN;
+	text-underline:navy;
+	text-decoration:underline;
+	text-underline:single;}
+p.2, li.2, div.2
+	{mso-style-name:要点段落2;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	text-indent:24.0pt;
+	mso-pagination:none;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:华文彩云;
+	color:#666699;
+	mso-font-kerning:1.0pt;
+	mso-fareast-language:ZH-CN;}
+p.11, li.11, div.11
+	{mso-style-name:重点段落1;
+	margin-top:.5gd;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	text-indent:10.0pt;
+	mso-char-indent-count:2.0;
+	mso-char-indent-size:5.0pt;
+	mso-line-height-alt:14.0pt;
+	mso-pagination:widow-orphan;
+	font-size:15.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:方正舒体;
+	mso-hansi-font-family:"Courier New";
+	mso-font-kerning:1.0pt;
+	mso-fareast-language:ZH-CN;
+	font-weight:bold;
+	mso-bidi-font-weight:normal;}
+p.KSYS01, li.KSYS01, div.KSYS01
+	{mso-style-name:KSYS01;
+	mso-style-update:auto;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	text-indent:21.0pt;
+	line-height:18.0pt;
+	mso-pagination:none;
+	font-size:14.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:方正姚体;
+	color:#33CCCC;
+	mso-font-kerning:1.0pt;
+	mso-fareast-language:ZH-CN;
+	font-weight:bold;
+	mso-bidi-font-weight:normal;}
+ /* Page Definitions */
+@page
+	{mso-page-border-surround-header:no;
+	mso-page-border-surround-footer:no;}
+@page Section1
+	{size:595.3pt 841.9pt;
+	margin:72.0pt 90.0pt 72.0pt 90.0pt;
+	mso-header-margin:42.55pt;
+	mso-footer-margin:49.6pt;
+	mso-paper-source:0;
+	layout-grid:15.6pt;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+@list l0
+	{mso-list-id:3359119;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-2090054940 -1176486636 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l0:level1
+	{mso-level-number-format:decimal-enclosed-circle;
+	mso-level-text:%1;
+	mso-level-tab-stop:39.0pt;
+	mso-level-number-position:left;
+	margin-left:39.0pt;
+	text-indent:-18.0pt;}
+@list l1
+	{mso-list-id:931398629;
+	mso-list-type:hybrid;
+	mso-list-template-ids:656820950 1312070208 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l1:level1
+	{mso-level-number-format:decimal-enclosed-circle;
+	mso-level-text:%1;
+	mso-level-tab-stop:42.0pt;
+	mso-level-number-position:left;
+	margin-left:42.0pt;
+	text-indent:-18.0pt;}
+ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+-->
+</style>
+<!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="1027"/>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+</head>
+
+<body lang=EN-US style='tab-interval:21.0pt;text-justify-trim:punctuation'>
+
+<div class=Section1 style='layout-grid:15.6pt'>
+
+<p class=MsoNormal style='margin-left:42.0pt;line-height:125%;layout-grid-mode:
+char;mso-layout-grid-align:none'><span style='font-size:14.0pt;mso-bidi-font-size:
+12.0pt'>29</span><span lang=ZH-CN style='font-size:14.0pt;mso-bidi-font-size:
+12.0pt;font-family:宋体;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman"'>．教学最优化理论</span><a name=教学最优化理论></a><span style='font-size:
+14.0pt;mso-bidi-font-size:12.0pt'><o:p></o:p></span></p>
+
+<p class=MsoPlainText style='margin:0cm;margin-bottom:.0001pt;text-indent:21.0pt;
+mso-char-indent-count:2.0;mso-char-indent-size:10.5pt;line-height:150%;
+layout-grid-mode:char;mso-layout-grid-align:none;mso-char-indent-size:10.5pt'><span
+lang=ZH-CN style='font-size:10.5pt;mso-bidi-font-size:12.0pt;font-family:宋体;
+mso-ascii-font-family:"Arial Unicode MS";mso-hansi-font-family:"Arial Unicode MS"'>巴班斯基</span><span
+lang=ZH-CN style='font-size:10.5pt;mso-bidi-font-size:12.0pt;font-family:宋体;
+mso-hansi-font-family:"Arial Unicode MS"'>以唯物辩证法为指导，将现代系统论的方法引入教学论的研究，提出了教学过程最优化理论。他指出：“教学过程最优化是在全面考虑教学规律、原则、现代教学的形式和方法、某一教学体系的特征及其外部条件的基础上，为了使过程从既定标准看来发挥最有效（即最优化）作用而组织的控制。”
+</span><span style='font-size:10.5pt;mso-bidi-font-size:12.0pt;font-family:
+宋体;mso-hansi-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+
+<p class=MsoPlainText style='margin:0cm;margin-bottom:.0001pt;text-indent:21.0pt;
+mso-char-indent-count:2.0;mso-char-indent-size:10.5pt;line-height:150%;
+layout-grid-mode:char;mso-layout-grid-align:none;mso-char-indent-size:10.5pt'><span
+lang=ZH-CN style='font-size:10.5pt;mso-bidi-font-size:12.0pt;font-family:宋体;
+mso-ascii-font-family:"Arial Unicode MS";mso-hansi-font-family:"Arial Unicode MS"'>应把教学看成一个系统，用系统的观点、方法来考察教学。教学效果取决于教学诸要素构成的合力，对教学综合分析、整体设计、全面评价。</span><span
+lang=ZH-CN style='font-size:10.5pt;mso-bidi-font-size:12.0pt;font-family:宋体;
+mso-hansi-font-family:"Arial Unicode MS"'>所谓教学过程最优化，就是根据培养目标和具体的教学任务考虑教学的实际，制定或选择一个最佳的方案，使教师和学生在花费最少的必要时间和精力的情况下取得最好的效果。</span><span
+style='font-size:10.5pt;mso-bidi-font-size:12.0pt;font-family:宋体;mso-hansi-font-family:
+"Arial Unicode MS"'><o:p></o:p></span></p>
+
+<p class=MsoPlainText style='margin:0cm;margin-bottom:.0001pt;text-indent:21.0pt;
+mso-char-indent-count:2.0;mso-char-indent-size:10.5pt;line-height:150%;
+layout-grid-mode:char;mso-layout-grid-align:none;mso-char-indent-size:10.5pt'><span
+lang=ZH-CN style='font-size:10.5pt;mso-bidi-font-size:12.0pt;font-family:宋体;
+mso-hansi-font-family:"Arial Unicode MS"'>（</span><span style='font-size:10.5pt;
+mso-bidi-font-size:12.0pt;font-family:宋体;mso-hansi-font-family:"Arial Unicode MS"'>1<span
+lang=ZH-CN>）</span></span><span lang=ZH-CN style='font-size:10.5pt;mso-bidi-font-size:
+12.0pt;font-family:宋体;mso-ascii-font-family:"Arial Unicode MS";mso-hansi-font-family:
+"Arial Unicode MS"'>教学最优化的标准</span><span style='font-size:10.5pt;mso-bidi-font-size:
+12.0pt;font-family:宋体;mso-hansi-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+
+<p class=MsoPlainText style='margin:0cm;margin-bottom:.0001pt;text-indent:21.0pt;
+mso-char-indent-count:2.0;mso-char-indent-size:10.5pt;line-height:150%;
+layout-grid-mode:char;mso-layout-grid-align:none;mso-char-indent-size:10.5pt'><span
+lang=ZH-CN style='font-size:10.5pt;mso-bidi-font-size:12.0pt;font-family:宋体;
+mso-hansi-font-family:"Arial Unicode MS"'>教学过程是否达到最优化有两个基本标准：效果标准和时间标准。效果标准，是指在某一时期内，根据所提出的任务，落实在全班每个学生身上的教养、教育与发展这三个相互联系的方面达到最大可能的效果。效果标准要求教学结果既要符合社会的客观要求，又要符合每个学生实际发挥的最大可能性。时间标准，是指教学工作需要的，不是花费很多的时间，而是合理地利用较少的时间，在尽可能少的时间内完成教学的要求。</span><span
+style='font-size:10.5pt;mso-bidi-font-size:12.0pt;mso-fareast-font-family:宋体;
+mso-font-kerning:1.0pt'><o:p></o:p></span></p>
+
+<p class=1 style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:150%;
+layout-grid-mode:char;mso-layout-grid-align:none'><span lang=ZH-CN
+style='font-family:宋体;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman"'>（</span>2<span lang=ZH-CN style='font-family:宋体;mso-ascii-font-family:
+"Times New Roman";mso-hansi-font-family:"Times New Roman"'>）教学最优化原则</span></p>
+
+<p class=1 style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:150%;
+layout-grid-mode:char;mso-layout-grid-align:none'><span lang=ZH-CN
+style='font-family:宋体;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman"'>教学最优化理论提出了教学十项原则：方向性、科学性和实践性、系统性和连贯性、可接受性、激发动机、自觉性积极性和独立性、各种方法最优结合、各种教学形式最优结合、教学创造最佳条件、巩固性和效用性。</span></p>
+
+<p style='margin:0cm;margin-bottom:.0001pt;text-indent:24.0pt;line-height:150%;
+layout-grid-mode:char;mso-layout-grid-align:none'><span lang=ZH-CN
+style='font-size:10.5pt;mso-bidi-font-size:12.0pt;font-family:宋体'>（</span><span
+style='font-size:10.5pt;mso-bidi-font-size:12.0pt;font-family:宋体'>3<span
+lang=ZH-CN>）教学最优化的程序</span><o:p></o:p></span></p>
+
+<p style='margin:0cm;margin-bottom:.0001pt;text-indent:24.0pt;line-height:150%;
+layout-grid-mode:char;mso-layout-grid-align:none'><span lang=ZH-CN
+style='font-size:10.5pt;mso-bidi-font-size:12.0pt;font-family:宋体'>巴班斯基提出了一套实施教学最优化的程序：</span><span
+style='font-size:10.5pt;mso-bidi-font-size:12.0pt;font-family:宋体'><o:p></o:p></span></p>
+
+<p style='margin:0cm;margin-bottom:.0001pt;text-indent:24.0pt;line-height:150%;
+layout-grid-mode:char;mso-layout-grid-align:none'><span lang=ZH-CN
+style='font-size:10.5pt;mso-bidi-font-size:12.0pt;font-family:宋体'>①综合地掌握教学任务，并在研究学生在学习中可能的表现的基础上，使任务具体化。</span><span
+style='font-size:10.5pt;mso-bidi-font-size:12.0pt;font-family:宋体'><o:p></o:p></span></p>
+
+<p style='margin:0cm;margin-bottom:.0001pt;text-indent:24.0pt;line-height:150%;
+layout-grid-mode:char;mso-layout-grid-align:none'><span lang=ZH-CN
+style='font-size:10.5pt;mso-bidi-font-size:12.0pt;font-family:宋体'>②选择在该条件下最优组织教学过程的标准。
+</span><span style='font-size:10.5pt;mso-bidi-font-size:12.0pt;font-family:
+宋体'><o:p></o:p></span></p>
+
+<p style='margin:0cm;margin-bottom:.0001pt;text-indent:24.0pt;line-height:150%;
+layout-grid-mode:char;mso-layout-grid-align:none'><span lang=ZH-CN
+style='font-size:10.5pt;mso-bidi-font-size:12.0pt;font-family:宋体'>③研究制定一整套该条件下的最优手段。</span><span
+style='font-size:10.5pt;mso-bidi-font-size:12.0pt;font-family:宋体'><o:p></o:p></span></p>
+
+<p style='margin:0cm;margin-bottom:.0001pt;text-indent:24.0pt;line-height:150%;
+layout-grid-mode:char;mso-layout-grid-align:none'><span lang=ZH-CN
+style='font-size:10.5pt;mso-bidi-font-size:12.0pt;font-family:宋体'>④尽量地改善教学条件。</span><span
+style='font-size:10.5pt;mso-bidi-font-size:12.0pt;font-family:宋体'><o:p></o:p></span></p>
+
+<p style='margin:0cm;margin-bottom:.0001pt;text-indent:24.0pt;line-height:150%;
+layout-grid-mode:char;mso-layout-grid-align:none'><span lang=ZH-CN
+style='font-size:10.5pt;mso-bidi-font-size:12.0pt;font-family:宋体'>⑤规定的教学计划的实施。</span><span
+style='font-size:10.5pt;mso-bidi-font-size:12.0pt;font-family:宋体'><o:p></o:p></span></p>
+
+<p style='margin:0cm;margin-bottom:.0001pt;text-indent:24.0pt;line-height:150%;
+layout-grid-mode:char;mso-layout-grid-align:none'><span lang=ZH-CN
+style='font-size:10.5pt;mso-bidi-font-size:12.0pt;font-family:宋体'>⑥依据标准，分析教学过程的结果。</span><span
+style='font-size:10.5pt;mso-bidi-font-size:12.0pt;font-family:宋体'><o:p></o:p></span></p>
+
+<p style='margin:0cm;margin-bottom:.0001pt;text-indent:24.0pt;line-height:150%;
+layout-grid-mode:char;mso-layout-grid-align:none'><span lang=ZH-CN
+style='font-size:10.5pt;mso-bidi-font-size:12.0pt;font-family:宋体'>教学过程最优化理论立足实践，运用唯物辩证法的观点和系统科学的方法，针对教学过程实现最优化进行深入研究，提出了许多精辟见解。这对我国广大教师优化教学过程，提高教学效率具有很大的借鉴和参考价值。</span></p>
+
+<p class=MsoNormal style='line-height:150%;layout-grid-mode:char;mso-layout-grid-align:
+none'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+</div>
+
+</body>
+
+</html>
