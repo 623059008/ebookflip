@@ -1,5 +1,5 @@
 # ebookflip
-> powered by turn.js
+> powered by turn.js, jQuery implementation
 
 An ebook website with flipping animations.
 
