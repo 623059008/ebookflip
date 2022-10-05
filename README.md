@@ -1,80 +1,120 @@
-# [Frontend Project] Digital Flipbook Player
+# Flip Book Player
 
-## Please read this before starting the Digital Flipbook Player project
+> Author: Tao Ren
+>
+> Email: tar118@pitt.edu
+>
+> Linkedin: https://www.linkedin.com/in/taoren-pitt/
 
-If you select the Digital Flipbook Player project, we will be considering you for a position with our Frontend team. Here are a few things we’ll be looking for as we evaluate your project and as you go through our interview process:
+## How to run this project
+1. Installs all the dependencies 
 
-- General knowledge of browsers and the web platform
-- Proficiency using JavaScript / React / HTML / CSS to build UI components
-- Sense of visual design and attention to detail
+    `yarn`
 
----
+2. Runs the app in the development mode.
 
-## Table of Contents
+    `yarn start`
 
-1. [Problem](#problem)
-2. [Requirements](#requirements)
-   1. [Additional features to implement](#additionally-please-pick-one-of-these-additional-features-to-implement)
-3. [Deliverables](#deliverables)
-   1. [Some "musts" to keed in mind](#some-musts-to-keep-in-mind)
-   2. [How we evaluate the project](#how-we-evaluate-the-project)
-4. [Getting started](#getting-started)
-
----
-
-## Problem
-
-Alice from Noovi is tasked with showing a video in their web app by calling an API endpoint to get the video. However, the API endpoint that should be returning the video is actually returning an array of image URLs where each image is a frame of the video! You ask your manager and they tell you that this is intentional; it’s up to you to stitch these images together to create a flipbook that mimics a video.
-
-## Requirements
-
-We would like you to build a flipbook player with the images given to you from the API endpoint. The flipbook player should support the following core features:
-
-1. Support playing and pausing the flipbook.
-2. The flipbook should run at at-least 30 frames-per-second (fps).
-3. The images must be loaded over the network.
-   1. you cannot download them and then load them locally.
-
-### Additionally, please pick one of these additional features to implement:
-
+## Additional Features
+I have implemented all additional features.
 1. A navigation bar that lets you jump to different parts of the flipbook.
 2. Ability to customize the frame rate (10 fps, 30 fps, 60 fps).
 3. Ability to zoom in/out and pan.
-4. Another product feature that you want to design and implement, and feel shows a similar level of complexity. Feel free to be creative! (if you choose #4, please implement a feature that demonstrates a skill beyond what you’ve used to build the base app from the requirements above).
+4. Multi-devices compatibility in style including laptop (Mac), PC, mobiles (iPhone SE, iPhone XR, iPhone 12 (Pro), iPhone 13 (Pro)) and tablet (iPad mini)
+5. Implemented mode change: image DOM, canvas rendering
 
-## Deliverables
+## Decisions, Tradeoff and Improvement
 
-1. Any and all code, tests, or mocks you write/create in `client/`.
-   1. Please do not include the `server/` and node_modules` directories when sending us your project.
-2. A README that describes:
-   1. How to run your project
-   2. Any additional features you implemented
-   3. Your approach to the product, including any design decisions or tradeoffs you made
-   4. How you could improve the performance of the flipbook (e.g. smoother frame rate)
+### 1. Ant Design and React Hooks
 
-### Some “musts” to keep in mind
+I use Ant Design to implement some components, like Slider, Button, Icon and Selector.
+The reason is obvious, Ant Design is an enterprise-class UI design language and React UI library with a set of high-quality React components, one of best React UI library for enterprises.
 
-- Your FE code must use React and be written with Javascript or Typescript.
-  - At Neeva, we use React with Typescript internally, so we're most familiar with those.
-- You may use external libraries and packages as long as they do not make meeting the project requirements trivial. You are responsible for implementing the major pieces of logic and styling by yourself. For example, you may use the Bootstrap CSS framework but we would like to see some custom styling with stylesheets as well.
-- Your project must run successfully and have a README in the root folder with instructions on how to deploy and run the project.
-- The project must be be installable and runnable from the command line without any additional software required beyond NodeJS and Yarn. Note that we use Macs as our dev machines, though we have access to a pure linux environment.
+All react components implmented by React Hooks.
 
-### How we evaluate the project
+Except Ant Design and React scaffold, I don't have any other dependencies.
 
-This project is designed to reflect the day-to-day work a frontend software engineer does at Neeva. As such, considering the user experience, the overall functionality, and the readability of code are important criteria. Here's how we’ll evaluate the project:
+### 2. Tradeoff
+> How I improve the frame rate, from Naive to Preload to Canvas Rendering
 
-- Functionality
-  Does the app work smoothly? Are there no obvious or glaring bugs? For example, what happens if a user uses keyboard navigation and presses the spacebar while using the flipbook?
-- Software engineering
-  Does your project show good understanding and use of your selected framework? Are you following good software engineering practices? Is the code logically structured and easy to read? Does the project show that you understand how to handle application state, respond to user input, and/or correctly utilize APIs?
-- Design
-  We're more interested in user experience than polished visual design. We want the information to be easily understandable. In other words, the design emphasis is on information architecture, not visual design. For example, instead of displaying a blank loading screen with a sharp transition, can an informative loading screen with a smooth transition be used?
+Firstly, I implemented the player by naive image elements, and flipped the pictures by updating the source of image element, and obviously the frame rate can not reach 30.
 
-# Getting started
+Then, I tried to preload all image elements in loading process to support higher frame rate. 
 
-**Note:** You will need [NodeJS](https://nodejs.org/en/download/) and [Yarn](https://yarnpkg.com/getting-started) installed on your computer.
+After preloading, the frame rate can reach 30 and about 60. But it still may skip some frame if the browser can not afford. It is a kinds of heavy task for browser to delete and insert DOM elements in 60 fps.
 
-This project is composed of two parts: the client and the server. You will only be working on the client part of this project.
+So I decided to use canvas to render the pre-loaded images. I did some calculations to center, scale, pan the image on the canvas. Thanks to the canvas rendering, the frame rate is stable and the burden of rendering work is greatly reduced.
 
-To setup the app, you will need 2 terminal instances running simultaneously: one to run the server and one to run the client. Please follow the respective `README.md` in `server/` and `client/` to set them up.
+I considered the window of preloading, which only queries a window size of pictures with offset and count, but it seems like no window can also meet the requirements of this project. So I spent more time on other fancy features.
+
+There are many tradeoff between canvas rendering performance and engineering complexity.
+
+For example, I choose to use setInterval to control fps, rather than requestAnimationFrame. It's easy for fps switching and it is enough to play these pictures, but is not enough for more complex cases like HTML5 games.
+
+I didn't implement multiple layered canvases to improve the fps after considering the spent time and improved performance.
+
+As for diff rendering, it's too technical in computer graphic for this frontend project. If that's what this project asked, then I'm wrong. :\<
+
+
+#### 2.1 Further
+
+Like I said, there still are many tricks to improve the frame rate, like requestAnimationFrame, hidden canvas preload, multiple layered canvases, redraw differently only.
+
+Considering the tradeoff between engineering complexity and performance, I didn't go deep in these tricks.
+
+### 3. Component Design and Decoupling
+
+In order to improve maintainability and decoupling, I split the Flipbook into three parts: **FlipHeader**, **FlipPage**, and **FlipController**.
+
+FlipHeader provides some basic text infomation about the book.
+
+FlipPage will choose one of three components with different implementations according to the selected mode: **FlipPageNaive**, **FlipPagePreload**, **FlipPageCanvas**, which implemented by source updating, preloading and canvas updating.
+
+FlipControler contains all operators like play/pause buttons and process bar, fps selector, zoom in/out/pan.
+
+I separate the data class from the component state to better develop. In class BookInfo, there are all infomation about a flipbook But I didn't use redux to manage the component state. I use traditionally way to update state between parent component and children components, transmiting the callback function as props. 
+
+Besides, I use a state updateFlag to manaully update the children components to solve the object state change problem, which is also the problem solved by immutable.js (I don't want to import other deps).
+
+I use an instance of BookInfo dataclass as the state of FlipBook, and the changes in this instance can not be watched by components. That's why I use this flag to update. 
+
+There is a FlipContainer to control invoking APIs for resources query and instance initialization. It won't be re-rendered after the initialization. I hide the mode switch, because I found after preloading, the effects of different modes are difficult to distinguish by observation. The default mode is 3, which loads FlipPageCanvas. If you are interested in the bad performance under the other 2 modes, you can change the mode in code.
+
+### 4. Debounce for progress bar
+
+I noticed there is frame flicking when moving progress bar, so I provide a debounce setPage for progress bar. The changes from progress bar will have 500ms latency time to avoid to update too frequently.
+For next page and previous page button, they sitll update the page state immediately.
+
+### 5. Demo
+
+Here is a [video](https://drive.google.com/file/d/1mijHThI4Li6Ux6cgWWWhtFapIB3WWOIV/view?usp=sharing) to show the final demo for those who don't want to run this project.
+
+
+
+
+## Available Scripts
+
+In the project directory, you can run:
+
+### `yarn`
+
+Installs all the dependencies for the app.
+
+### `yarn start`
+
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
+
+### `yarn build`
+
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
+
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
+
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
