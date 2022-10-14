@@ -7,7 +7,7 @@
 > Linkedin: https://www.linkedin.com/in/taoren-pitt/
 
 ## Demo
-[React FlipBook Player](https://drive.google.com/file/d/1mijHThI4Li6Ux6cgWWWhtFapIB3WWOIV/view?usp=sharing)
+[React FlipBook Player](https://drive.google.com/file/d/1Sa4EVXyLZVUiFwnyloNbehU5VO7W53Y5/view?usp=sharing)
 
 ![Demo](./demo.png)
 
