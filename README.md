@@ -6,6 +6,11 @@
 >
 > Linkedin: https://www.linkedin.com/in/taoren-pitt/
 
+## Demo
+[React FlipBook Player](https://drive.google.com/file/d/1mijHThI4Li6Ux6cgWWWhtFapIB3WWOIV/view?usp=sharing)
+
+![Demo](./demo.png)
+
 ## How to run this project
 1. Installs all the dependencies 
 
@@ -85,10 +90,6 @@ There is a FlipContainer to control invoking APIs for resources query and instan
 I noticed there is frame flicking when moving progress bar, so I provide a debounce setPage for progress bar. The changes from progress bar will have 500ms latency time to avoid to update too frequently.
 For next page and previous page button, they sitll update the page state immediately.
 
-### 5. Demo
-
-Here is a [video](https://drive.google.com/file/d/1mijHThI4Li6Ux6cgWWWhtFapIB3WWOIV/view?usp=sharing) to show the final demo for those who don't want to run this project.
-
 
 
 
@@ -117,4 +118,9 @@ The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+
+## Tool
+
+I also implemented a python script based on python-opencv to convert a video to images. These images can be placed under `server/public/assets/videos/video*/`.
 

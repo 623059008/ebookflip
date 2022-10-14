@@ -14,9 +14,28 @@
 ## Setup
 
 1. Run `yarn` inside of this `server/` directory to install the required dependencies.
-2. Extract the `videos.zip` in `public/assets/videos/` to the same place.
-   - If extracted correctly, the path to `video1/` should be `public/assets/videos/video1/` from `server/`.
+2. Add images resource to `/server/public/assets/videos`, see the detail below.
 3. Run `yarn start` from this `server/` directory to bring up the server (should be hosted on http://localhost:3001 by default).
+
+### Add Images Resource
+
+There is a script `video2images.py` using `python-opencv` to convert `test.mp4` to `output/{count}.jpg`
+
+After you converted the `output` images folder, rename it as `videos{id}` and placed it under `/server/public/assets/videos/`
+
+Don't forget to add `info.json` under the framses.
+For example, `/server/public/assets/videos/video1/frames/info.json`
+```json
+{
+  "id": 1,
+  "name": "Tom and Jerry",
+  "description": "Tom and Jerry",
+  "author": "Rembrandt Films",
+  "source": "Google",
+  "numTotalFrames": 5537
+}
+```
+
 
 ## API endpoints
 
@@ -24,7 +43,7 @@
 
 #### Description
 
-Gets information about the video and the paths to the frames of the video.
+Gets information about the video and the paths to the frames of the `video1`
 
 #### Params
 

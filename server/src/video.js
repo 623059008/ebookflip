@@ -15,6 +15,7 @@ const totalVideos = fs.readdirSync(allVideosDir).length;
  * @returns true if valid, false otherwise
  */
 function isValidVideoID(id) {
+  console.log('[server] videos files', fs.readdirSync(allVideosDir));
   return Number(id) && id >= 1 && id <= totalVideos;
 }
 
@@ -62,9 +63,17 @@ function createVideoResponse(fastify, id, offset, count) {
     let numWantedFrames = Number(count);
     if (
       !numWantedFrames ||
-      startingFrameIdx + numWantedFrames > infoJSON.frames.length
+      startingFrameIdx + numWantedFrames > infoJSON.numTotalFrames
     ) {
-      numWantedFrames = infoJSON.frames.length - startingFrameIdx;
+      numWantedFrames = infoJSON.numTotalFrames - startingFrameIdx;
+    }
+    // generate frames array for info.json
+    if(!infoJSON.frames) {
+      infoJSON.frames = [];
+      for(let i=0;i<infoJSON.numTotalFrames;i++) {
+        const path = `${i}.jpg`;
+        infoJSON.frames.push(path);
+      }
     }
 
     let frames = [];
