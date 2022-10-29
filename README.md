@@ -6,6 +6,12 @@
 >
 > Linkedin: https://www.linkedin.com/in/taoren-pitt/
 
+It is a React Flipbook player. 
+
+It can play continuous images as different fps (1 - 60) with high performance based on canvas rendering.
+
+There are various controller components like navigation bar, flip button, zoom in/out/pan.
+
 ## Demo
 [React FlipBook Player](https://drive.google.com/file/d/1Sa4EVXyLZVUiFwnyloNbehU5VO7W53Y5/view?usp=sharing)
 
@@ -122,5 +128,6 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 ## Tool
 
-I also implemented a python script based on python-opencv to convert a video to images. These images can be placed under `server/public/assets/videos/video*/`.
+I also implemented a python script based on python-opencv to convert a video to images. 
+These images can be placed under `server/public/assets/videos/video*/` so that you can request the corresponding resources to play.
 
